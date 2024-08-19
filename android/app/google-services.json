@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "164988742942",
+    "project_id": "peirdeimtask",
+    "storage_bucket": "peirdeimtask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164988742942:android:27d214013538315f2d6d0f",
+        "android_client_info": {
+          "package_name": "com.perdiemmobiletask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf3R2ej827BvR6mHVTFsBsLESncL_tt78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "164988742942-d8cjkgnru786qfbmja5j51kv57ifuuvp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.PerdiemMobileTask"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,7 @@
 {
   "name": "PerdiemMobileTask",
-  "displayName": "PerdiemMobileTask"
+  "displayName": "PerdiemMobileTask",
+  "plugins": [
+    "@notifee/react-native"
+  ]
 }
