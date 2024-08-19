@@ -21,24 +21,7 @@ const ListViewScreen = () => {
     };
     const RenderFLatListFooter = () => {
         return (<>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <TextInput
-                    placeholder="Enter data"
-                    value={input}
-                    onChangeText={setInput}
-                    style={{ borderColor: 'gray', flex: 1, borderWidth: 1, padding: 10, margin: 10, marginBottom: 10 }}
-                />
-                <Button buttonStyle={{
-                    backgroundColor: ColorConst.indicatorColor, padding: 10,
-                    borderRadius: 5,
-                    alignItems: 'center',
-                }} buttonText="Submit" handlePress={handleAddData} />
-            </View>
-            <FlatList
-                data={userData}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({ item }) => <Text>{item}</Text>}
-            /></>)
+        </>)
     }
     return (
         <View>
@@ -48,6 +31,24 @@ const ListViewScreen = () => {
                 keyExtractor={(item, index) => index.toString()}
                 ListFooterComponent={() => <RenderFLatListFooter />}
                 keyboardShouldPersistTaps={'handled'}
+            />
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <TextInput
+                    placeholder="Enter data"
+                    value={input}
+                    onChangeText={setInput}
+                    style={{ borderColor: 'gray', flex: 1, borderWidth: 1, padding: 10, margin: 10, marginBottom: 10 }}
+                />
+                <Button buttonStyle={{
+                    backgroundColor: ColorConst.primaryColor, padding: 10,
+                    borderRadius: 5,
+                    alignItems: 'center',
+                }} buttonText="Submit" handlePress={handleAddData} />
+            </View>
+            <FlatList
+                data={userData}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item }) => <Text>{item}</Text>}
             />
         </View>
     );

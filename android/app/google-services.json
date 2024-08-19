@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "164988742942-lagj4et4gdd3reuke9apikq1ecn8smgj.apps.googleusercontent.com",
+          "client_type": 3,
+          "android_info": {
+            "package_name": "com.perdiemmobiletask",
+            "certificate_hash": "2ecdfeb742695f030ccf2e771e40b3778f452802"
+          }
+        },
+        {
           "client_id": "164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9.apps.googleusercontent.com",
           "client_type": 3
         }

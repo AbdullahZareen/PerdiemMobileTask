@@ -3,6 +3,7 @@ import React from 'react'
 import { DataList } from '../models/list-view'
 import { useDispatch } from 'react-redux'
 import { updateListViewToggle } from '../redux/slice/AppSlice'
+import { ColorConst } from '../constants'
 
 interface IMediaItem {
     item: DataList;
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         padding: 10,
         borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
+        borderBottomColor: ColorConst.borderGray,
     },
     itemText: {
         fontSize: 18,

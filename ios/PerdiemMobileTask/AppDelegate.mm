@@ -16,17 +16,11 @@
   self.initialProps = @{};
 
   BOOL ret = [super application:application didFinishLaunchingWithOptions:launchOptions];
-  if (ret == YES)
-    {
       [RNSplashScreen show];
-    }
-  
-
-
   // Define UNUserNotificationCenter
   UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
   center.delegate = self;
-    return ret;
+  return ret;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge

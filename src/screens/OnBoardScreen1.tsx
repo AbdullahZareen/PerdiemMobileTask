@@ -2,7 +2,7 @@ import React from 'react';
 
 import { OnBoardPageComponent } from '../components';
 
-const OnboardingScreen1 = ({ navigation }: any) => {
-    return (<OnBoardPageComponent screenIndex={0} onPressNext={() => { }} onPressBack={() => { }} />)
+const OnboardingScreen1 = () => {
+    return (<OnBoardPageComponent screenIndex={0} />)
 };
 export default OnboardingScreen1;

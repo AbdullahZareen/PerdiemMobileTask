@@ -27,12 +27,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9.apps.googleusercontent.com</string>
+				<string>com.googleusercontent.apps.164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -42,19 +44,12 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
-	<key>UIBackgroundModes</key>
-<array>
-  <string>fetch</string>
-  <string>remote-notification</string>
-</array>
-<key>NSUserTrackingUsageDescription</key>
-<string>We need your permission to show notifications.</string>
-<key>FirebaseAppDelegateProxyEnabled</key>
-<false/>
-<key>NSLocationAlwaysUsageDescription</key>
-<string>We need your location to provide better service.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to provide better service.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>We need your permission to show notifications.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

@@ -10,16 +10,14 @@ import {
     Platform,
     KeyboardAvoidingView,
 } from 'react-native';
-import { ScreenConst } from '../constants';
+import { ColorConst, ScreenConst } from '../constants';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from '@react-native-google-signin/google-signin';
-import { showNotification, showScheduleNotification } from '../notifications-popup/notification';
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 
-
-
 const LoginScreen = () => {
-    const [username, setUsername] = useState('admin');
-    const [password, setPassword] = useState('password123');
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     const navigation: any = useNavigation();
 
     const handleLogin = () => {
@@ -32,26 +30,6 @@ const LoginScreen = () => {
         }
     };
 
-    useEffect(() => {
-        const type = 'notification';
-        PushNotificationIOS.addEventListener(type, onRemoteNotification);
-        return () => {
-            PushNotificationIOS.removeEventListener(type);
-        };
-    });
-
-    const onRemoteNotification = (notification: any) => {
-        const isClicked = notification.getData().userInteraction === 1;
-
-        if (isClicked) {
-            // Navigate user to another screen
-        } else {
-            // Do something else with push notification
-        }
-        // Use the appropriate result based on what you needed to do for this notification
-        const result = PushNotificationIOS.FetchResult.NoData;
-        notification.finish(result);
-    };
     const handleGoogleLogin = async () => {
         try {
             await GoogleSignin.hasPlayServices();
@@ -106,8 +84,7 @@ const LoginScreen = () => {
                     style={styles.googleButton}
                     size={GoogleSigninButton.Size.Wide}
                     color={GoogleSigninButton.Color.Dark}
-                    // onPress={handleGoogleLogin}
-                    onPress={() => showScheduleNotification('my notication', "testing", null)}
+                    onPress={handleGoogleLogin}
                 />
             </View>
         </KeyboardAvoidingView>
@@ -119,7 +96,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 20,
-        backgroundColor: '#fff',
+        backgroundColor: ColorConst.white,
     },
     title: {
         fontSize: 24,
@@ -129,7 +106,7 @@ const styles = StyleSheet.create({
     },
     input: {
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor: ColorConst.borderGray,
         borderRadius: 5,
         padding: 10,
         marginBottom: 15,
@@ -142,7 +119,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonText: {
-        color: '#fff',
+        color: ColorConst.white,
         fontSize: 16,
         fontWeight: 'bold',
     },
@@ -150,7 +127,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginVertical: 20,
         fontSize: 16,
-        color: '#666',
+        color: ColorConst.gray,
     },
     googleButton: {
         width: '100%',

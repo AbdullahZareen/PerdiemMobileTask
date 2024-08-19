@@ -7,8 +7,10 @@ import { screenPagesData } from '../constants/DataConst'
 import { goBack, navigate, replace } from '../navigations/NavigationService'
 import { useDispatch } from 'react-redux'
 import { setIsNotOnboardScreens } from '../redux/slice/AppSlice'
-
-export const OnBoardPageComponent = ({ screenIndex, }: any) => {
+interface IOnBoardComp {
+    screenIndex: number;
+}
+export const OnBoardPageComponent = ({ screenIndex }: IOnBoardComp) => {
     const dispatch = useDispatch()
     const onPressNext = () => {
         if (screenIndex === 2) {
@@ -66,7 +68,7 @@ export const OnBoardPageComponent = ({ screenIndex, }: any) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: ColorConst.indicatorColor,
+        backgroundColor: ColorConst.primaryColor,
     },
     pagintionContainer: {
         flexDirection: 'row',
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
     },
     itemContainer: {
         flex: 1,
-        backgroundColor: ColorConst.indicatorColor,
+        backgroundColor: ColorConst.primaryColor,
         alignItems: 'center',
         justifyContent: 'space-around',
     },
@@ -170,6 +172,7 @@ const styles = StyleSheet.create({
     },
     buttonView: {
         width: SizeClass.wp(100),
+        marginBottom: 20,
         paddingHorizontal: 50,
         flexDirection: "row",
         justifyContent: 'space-between',

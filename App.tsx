@@ -10,6 +10,7 @@ import { requestNotificationPermission } from './src/notifications-popup/notific
 
 GoogleSignin.configure({
   webClientId: '164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9.apps.googleusercontent.com',
+  iosClientId: '164988742942-2omqfg5dk9u22plbqvunpcbfn942onl9.apps.googleusercontent.com',
 });
 const App = () => {
   useEffect(() => {

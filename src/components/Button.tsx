@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { ColorConst } from '../constants';
 
 
 type Props = {
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
 
     },
     btnTextStyle: {
-        color: '#fff',
+        color: ColorConst.white,
         fontSize: 16,
         fontWeight: 'bold',
     },

@@ -11,7 +11,7 @@ import { navigationRef } from './NavigationService';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { AppState, Platform } from 'react-native';
-import { showNotification, showScheduleNotification } from '../notifications-popup/notification';
+import { showScheduleNotification } from '../notifications-popup/notification';
 import { DataList } from '../models/list-view';
 const Stack = createNativeStackNavigator<any>();
 
@@ -28,7 +28,7 @@ export default function AppStack() {
             const message = switchNames.length > 0
                 ? `Switch ${switchNames.join(', ')} are ON`
                 : 'No switches are ON';
-            showScheduleNotification('Switches Status', message, null)
+            showScheduleNotification('Switches Status', message, delayTime)
         } catch (error) {
             console.error('Failed to send notification.', error);
         }

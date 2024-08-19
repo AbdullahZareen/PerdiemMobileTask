@@ -1,7 +1,6 @@
 import PushNotificationIOS from "@react-native-community/push-notification-ios";
 import { PermissionsAndroid, Platform } from "react-native";
 import PushNotification from "react-native-push-notification";
-import notifee, { AuthorizationStatus, TimestampTrigger, TriggerType } from '@notifee/react-native';
 const showNotification = async (title: string, message: string) => {
     if (Platform.OS === 'ios') {
         PushNotificationIOS.presentLocalNotification({
@@ -24,14 +23,14 @@ const showScheduleNotification = async (title: any, message: any, date: any) => 
             alertTitle: title,
             alertBody: message,
             soundName: 'default',
-            fireDate: date ?? new Date(Date.now() + (1000)).toISOString(),
+            fireDate: date ?? new Date(Date.now() + (2000)).toISOString(),
         })
     } else {
         PushNotification.localNotificationSchedule({
             channelId: '1',
             title: title,
             message: message,
-            date: date ?? new Date(Date.now() + 1000),
+            date: date ?? new Date(Date.now() + 2000),
         });
     }
 
@@ -66,13 +65,5 @@ async function requestNotificationPermission() {
         console.log("Notification permission denied");
     }
 }
-// async function requestUserPermission() {
-//     const settings = await notifee.requestPermission();
 
-//     if (settings.authorizationStatus == AuthorizationStatus.AUTHORIZED) {
-//         console.log('Notification permissions has been authorized');
-//     } else if (settings.authorizationStatus == AuthorizationStatus.DENIED) {
-//         console.log('Notification permissions has been denied');
-//     }
-// }
 export { showNotification, showScheduleNotification, requestNotificationPermission }
